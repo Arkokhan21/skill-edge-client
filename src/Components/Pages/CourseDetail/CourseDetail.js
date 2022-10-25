@@ -13,7 +13,7 @@ const CourseDetail = () => {
                         className="inline-block mb-5"
                     >
                         <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
 
@@ -31,22 +31,19 @@ const CourseDetail = () => {
             </div>
 
             <div className='flex justify-center'>
-                <div class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 p-5">
-                    <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={image} alt="" />
-                    <div class="flex flex-col justify-between p-4 leading-normal">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{details}</p>
+                <div className="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 p-5">
+                    <img className="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={image} alt="" />
+                    <div className="flex flex-col justify-between p-4 leading-normal">
+                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{details}</p>
                         <div className=''>
-                            <p className='text-gray-400'>Total Enroll: {total_enroll}</p>
-                            <p className='text-gray-400'>Instructor: {instructor.name}</p>
-                            <p className='text-gray-400'>Published: {instructor.published_date}</p>
+                            <p className='text-gray-200'>Enrolled: {total_enroll}</p>
+                            <p className='text-gray-200'>Instructor: {instructor.name}</p>
+                            <p className='text-gray-200'>Published: {instructor.published_date}</p>
                         </div>
-                        <Link
-                            to='/'
-                            className='py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 grid mt-5'
-                        >
-                            <Link to={`/purchaseCourse/${id}`}><button>Purchase</button></Link>
-                        </Link>
+                        <div className='py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 grid mt-5'>
+                            <Link to={`/purchaseCourse/${id}`}><button>Get this course</button></Link>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -11,21 +11,21 @@ const Home = () => {
                         className="inline-block mb-5"
                     >
                         <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" class="w-6 h-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
                             </svg>
                         </div>
                     </Link>
                     <h5 className="mb-4 text-4xl font-extrabold leading-none">
-                        Complete Web Development
+                        We Provide
                         <br className="hidden md:block" />
-                        Course With{' '}
+                        The Best Training to Develop Technical and{' '}
                         <span className="inline-block text-deep-purple-accent-400">
-                            Skill Edge
+                            Professional Skills
                         </span>
                     </h5>
                     <p className="mb-6 text-gray-900">
-                        Many people are afraid to learn web development as programming is a time consuming skill. But it is a skill that can be learned more than many other simple skills. So you need a guideline that will teach you web development in an easy way. And you can rely on Skill Edge's 'Web Development' course.
+                        Many people are afraid to learn programming. But it is a skill that can be learned more than many other general skills. So you need a guideline that will teach you programming in an easy way. And you can rely on Skill-Edge's 'Programming' courses.
                     </p>
                     <hr className="mb-5 border-gray-300" />
                     <div>

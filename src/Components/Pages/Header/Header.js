@@ -41,7 +41,7 @@ const Header = () => {
                             <p onClick={handleSignOut} className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-10 cursor-pointer'>
                                 Log Out
                             </p>
-                            <img className='block mt-4 lg:inline-block lg:mt-0 rounded-full h-9' src={user?.photoURL} alt="" />
+                            <img className='block mt-4 lg:inline-block lg:mt-0 rounded-full h-9 tooltip' src={user?.photoURL} title={user?.displayName} alt="" />
                         </>
                         :
                         <>

@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/Authprovider';
 import { GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
+import { FaGoogle, FaGithub } from "react-icons/fa";
+import { toast } from 'react-hot-toast'
 
 
 const Register = () => {
@@ -23,6 +25,7 @@ const Register = () => {
                 const user = result.user
                 console.log(user)
                 form.reset()
+                toast.success('Register Successful')
                 setError('')
                 handleUpdateUserProfile(name, photoURL)
             }))
@@ -98,10 +101,10 @@ const Register = () => {
                 </form>
             </div>
             <div className='ml-5'>
-                <button onClick={handleGoogleSignIn} type="submit" className="mb-2 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-400 dark:hover:bg-red-500 dark:focus:ring-blue-800">
+                <button onClick={handleGoogleSignIn} type="submit" className="mb-2 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-400 dark:hover:bg-red-500 dark:focus:ring-blue-800"> <FaGoogle></FaGoogle>
                     Sign Up With Google
                 </button>
-                <button onClick={handleGitHubSignIn} type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-blue-800">
+                <button onClick={handleGitHubSignIn} type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-blue-800"> <FaGithub></FaGithub>
                     Sign Up With GitHub
                 </button>
             </div>
