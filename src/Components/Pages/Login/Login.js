@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Context/Authprovider';
 
 const Login = () => {
+
+    const { signInUser } = useContext(AuthContext)
+
+    const handleLogin = (event) => {
+        event.preventDefault()
+        const form = event.target
+        const name = form.name.value
+        const photoURL = form.photoURL.value
+        const email = form.email.value
+        const password = form.password.value
+
+        signInUser(email, password)
+            .then((result => {
+                const user = result.user
+                console.log(user)
+            }))
+            .catch(error => console.error(error))
+    }
+
     return (
         <div className='flex justify-center mt-10'>
             <div class="p-4 w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-                <form class="space-y-6" action="#">
+                <form onSubmit={handleLogin} class="space-y-6" action="#">
                     <h5 class="text-xl font-medium text-gray-900 dark:text-white">Log in</h5>
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
