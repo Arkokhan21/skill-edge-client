@@ -6,10 +6,10 @@ const Courses = () => {
     const courses = useLoaderData()
     return (
         <div className='flex flex-row my-10'>
-            <div className='basis-80'>
-                <p className='my-5 text-xl font-bold'>Total Course: {courses.length}</p>
+            <div className='basis-80 bg-slate-100'>
+                <p className='my-5 text-2xl font-bold'>Total Course: {courses.length}</p>
                 {
-                    courses.map(course => <p key={course.id}>
+                    courses.map(course => <p className='mt-10 text-lg font-bold hover:text-blue-700' key={course.id}>
                         <Link to={`/courses/${course.id}`}>{course.title}</Link>
                     </p>)
                 }

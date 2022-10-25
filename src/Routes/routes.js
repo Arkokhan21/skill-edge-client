@@ -4,6 +4,7 @@ import CourseDetail from "../Components/Pages/CourseDetail/CourseDetail";
 import Courses from "../Components/Pages/Courses/Courses";
 import Home from "../Components/Pages/Home/Home";
 import Login from "../Components/Pages/Login/Login";
+import PurchaseCourse from "../Components/Pages/PurchaseCourse/PurchaseCourse";
 import Register from "../Components/Pages/Register/Register";
 import Main from "../Layout/Main";
 
@@ -28,6 +29,11 @@ export const router = createBrowserRouter([
             {
                 path: '/courses/:id',
                 element: <CourseDetail></CourseDetail>,
+                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+            },
+            {
+                path: '/purchaseCourse/:id',
+                element: <PurchaseCourse></PurchaseCourse>,
                 loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
             },
             {
