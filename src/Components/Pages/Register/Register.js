@@ -1,12 +1,14 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/Authprovider';
+import { GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
+
 
 const Register = () => {
 
     const [error, setError] = useState('')
 
-    const { createUser, updateUserProfile } = useContext(AuthContext)
+    const { createUser, updateUserProfile, googleSignIn, gitHubSignIn } = useContext(AuthContext)
 
     const handleRegister = (event) => {
         event.preventDefault()
@@ -25,6 +27,28 @@ const Register = () => {
                 handleUpdateUserProfile(name, photoURL)
             }))
             .catch(error => setError(error.message))
+    }
+
+    const googleProvider = new GoogleAuthProvider();
+
+    const handleGoogleSignIn = () => {
+        googleSignIn(googleProvider)
+            .then(result => {
+                const user = result.user
+                console.log(user)
+            })
+            .catch(error => console.error(error))
+    }
+
+    const gitHubProvider = new GithubAuthProvider();
+
+    const handleGitHubSignIn = () => {
+        gitHubSignIn(gitHubProvider)
+            .then(result => {
+                const user = result.user
+                console.log(user)
+            })
+            .catch(error => console.error(error))
     }
 
     const handleUpdateUserProfile = (name, photoURL) => {
@@ -72,6 +96,14 @@ const Register = () => {
                         Already have an account? <Link to='/login' className="text-blue-700 hover:underline dark:text-blue-500">Please Login</Link>
                     </div>
                 </form>
+            </div>
+            <div className='ml-5'>
+                <button onClick={handleGoogleSignIn} type="submit" className="mb-2 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-400 dark:hover:bg-red-500 dark:focus:ring-blue-800">
+                    Sign Up With Google
+                </button>
+                <button onClick={handleGitHubSignIn} type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-blue-800">
+                    Sign Up With GitHub
+                </button>
             </div>
         </div>
     );
