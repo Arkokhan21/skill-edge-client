@@ -3,6 +3,7 @@ import Blog from "../Components/Pages/Blog/Blog";
 import CourseDetail from "../Components/Pages/CourseDetail/CourseDetail";
 import Courses from "../Components/Pages/Courses/Courses";
 import Error from "../Components/Pages/Error/Error";
+import Faq from "../Components/Pages/Faq/Faq";
 import Home from "../Components/Pages/Home/Home";
 import Login from "../Components/Pages/Login/Login";
 import PurchaseCourse from "../Components/Pages/PurchaseCourse/PurchaseCourse";
@@ -51,6 +52,10 @@ export const router = createBrowserRouter([
                 path: '/register',
                 element: <Register></Register>,
             },
+            {
+                path: '/faq',
+                element: <Faq></Faq>
+            }
         ]
     },
 ]);
