@@ -29,4 +29,4 @@
 3. Firebase (For Authentication System)
 
 
-## Live Site Link:
+## Live Site Link: https://skill-edge-e9e3a.web.app/
