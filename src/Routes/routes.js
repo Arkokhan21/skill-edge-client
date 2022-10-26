@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Blog from "../Components/Pages/Blog/Blog";
 import CourseDetail from "../Components/Pages/CourseDetail/CourseDetail";
 import Courses from "../Components/Pages/Courses/Courses";
+import Error from "../Components/Pages/Error/Error";
 import Home from "../Components/Pages/Home/Home";
 import Login from "../Components/Pages/Login/Login";
 import PurchaseCourse from "../Components/Pages/PurchaseCourse/PurchaseCourse";
@@ -12,6 +13,7 @@ import Privateroute from "./Privateroute";
 export const router = createBrowserRouter([
     {
         path: '/',
+        errorElement: <Error></Error>,
         element: <Main></Main>,
         children: [
             {

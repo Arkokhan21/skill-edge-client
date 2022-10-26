@@ -40,11 +40,56 @@ const Home = () => {
                 <div>
                     <img
                         className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
-                        src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+                        src="https://images.unsplash.com/photo-1568333261345-0918efdce2d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNsYXNzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
                         alt=""
                     />
                 </div>
             </div>
+
+            <section className="py-6 bg-gray-800  text-gray-100 mt-36">
+                <div className="container flex flex-col items-center justify-center p-4 mx-auto space-y-8 sm:p-10">
+                    <h1 className="text-4xl font-bold leading-none text-center sm:text-5xl">Meet our team</h1>
+                    <p className="max-w-2xl text-center  text-gray-400">The talented people behind the scenes</p>
+                    <div className="flex flex-row flex-wrap-reverse justify-center">
+                        <div className="flex flex-col justify-center m-8 text-center">
+                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full  bg-gray-500"
+                                src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cGVvcGxlfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                            <p className="text-xl font-semibold leading-tight">Jimmy Dane</p>
+                            <p className=" text-gray-400">Web Designer</p>
+                        </div>
+                        <div className="flex flex-col justify-center m-8 text-center">
+                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full  bg-gray-500"
+                                src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
+                            <p className="text-xl font-semibold leading-tight">Bruce Banner</p>
+                            <p className=" text-gray-400">Graphic Designer</p>
+                        </div>
+                        <div className="flex flex-col justify-center m-8 text-center">
+                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full  bg-gray-500"
+                                src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlb3BsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60" />
+                            <p className="text-xl font-semibold leading-tight">Tony Stark</p>
+                            <p className=" text-gray-400">Web Developer</p>
+                        </div>
+                        <div className="flex flex-col justify-center m-8 text-center">
+                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full  bg-gray-500"
+                                src="https://images.unsplash.com/photo-1485206412256-701ccc5b93ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHBlb3BsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60" />
+                            <p className="text-xl font-semibold leading-tight">Peter Parker</p>
+                            <p className=" text-gray-400">React Developer</p>
+                        </div>
+                        <div className="flex flex-col justify-center m-8 text-center">
+                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full  bg-gray-500"
+                                src="https://images.unsplash.com/photo-1485528562718-2ae1c8419ae2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHBlb3BsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60" />
+                            <p className="text-xl font-semibold leading-tight">Chris Hemsworth</p>
+                            <p className=" text-gray-400">Frontend Developer</p>
+                        </div>
+                        <div className="flex flex-col justify-center m-8 text-center">
+                            <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full  bg-gray-500"
+                                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjF8fHBlb3BsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60" />
+                            <p className="text-xl font-semibold leading-tight">Leroy Jenkins</p>
+                            <p className=" text-gray-400">Laravel Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
