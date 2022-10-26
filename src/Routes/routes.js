@@ -28,17 +28,17 @@ export const router = createBrowserRouter([
             {
                 path: '/courses',
                 element: <Courses></Courses>,
-                loader: () => fetch('http://localhost:5000/courses')
+                loader: () => fetch(' https://skill-edge-server-kappa.vercel.app/courses')
             },
             {
                 path: '/courses/:id',
                 element: <CourseDetail></CourseDetail>,
-                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({ params }) => fetch(` https://skill-edge-server-kappa.vercel.app/courses/${params.id}`)
             },
             {
                 path: '/purchaseCourse/:id',
                 element: <Privateroute><PurchaseCourse></PurchaseCourse></Privateroute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({ params }) => fetch(` https://skill-edge-server-kappa.vercel.app/courses/${params.id}`)
             },
             {
                 path: '/blog',
